@@ -1,0 +1,2 @@
+/Users/lenar/Desktop/OOP/build/CMakeFiles/edit_cache.dir
+/Users/lenar/Desktop/OOP/build/CMakeFiles/rebuild_cache.dir
