@@ -1,0 +1,6 @@
+CMake Error at D:/programs/vcpkg/scripts/buildsystems/vcpkg.cmake:608 (_add_executable):
+  The target name "test" is reserved when CTest testing is enabled.
+Call Stack (most recent call first):
+  prj.test/CMakeLists.txt:1 (add_executable)
+
+
