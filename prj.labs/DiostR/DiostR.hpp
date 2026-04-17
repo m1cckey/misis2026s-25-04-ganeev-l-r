@@ -1,43 +1,69 @@
+// DiostRB.hpp
 #pragma once
+
 #include <string>
 #include <iostream>
 
-class DioStrB{
-private:
-    std::string data_;
+class DiostRB {
 public:
-    DioStrB() = default;
-    DioStrB(const DioStrB& src) = default;
-    DioStrB(DioStrB&& src) = default;
-    ~DioStrB() = default;
-    explicit DioStrB(const std::string str): data_(str){}
+    using byte_type = unsigned char;
 
-    
-    
-    const std::string& val() const { return data_; }
-    const std::string& str() const { return data_; }
-    void clear() { data_.clear(); }
+    DiostRB() = default;
 
-    DioStrB& operator=(const DioStrB& other) {
-        if (this != &other) {  // Самоприсваивание
-            data_ = other.data_;
-        }
+  
+    explicit DiostRB(const std::string& data) : str_(data) {}
+
+    explicit DiostRB(const std::vector<byte_type>& data)
+        : str_(reinterpret_cast<const char*>(data.data()), data.size())
+    {}
+
+    DiostRB(const std::vector<char>& data)
+        : str_(data.data(), data.size())
+    {}
+
+    DiostRB(const DiostRB& other) = default;
+    DiostRB(DiostRB&& other) noexcept = default;
+    DiostRB& operator=(const DiostRB& other) = default;
+    DiostRB& operator=(DiostRB&& other) noexcept = default;
+
+    DiostRB& operator=(const std::string& data) {
+        str_ = data;
         return *this;
     }
-     
-    friend std::ostream& operator << (std::ostream& os, const DioStrB& obj){
-        return os << obj.val();
-    }
-    friend std::istream operator >> (std::istream& is, const DioStrB& obj){
-        std::string temp;
-        std::getline(is, temp, '\n'); 
-        obj.data_ = temp;
-        return is;
+    DiostRB& operator=(const std::vector<byte_type>& data) {
+        str_.assign(reinterpret_cast<const char*>(data.data()), data.size());
+        return *this;
     }
 
+    const std::string& str() const { return str_; }
+
+private:
+    std::string str_;
+};
 
 
 
+// read
+inline std::istream& operator>>(std::istream& is, DiostRB& obj) {
+    size_t size = 0;
+    is.read(reinterpret_cast<char*>(&size), sizeof(size));
+    if (is) {
+        obj.str_.resize(size);  // заранее подготавливаем строку
+        if (size > 0) {
+            is.read(const_cast<char*>(obj.str_.data()), size);
+        }
+    }
+    return is;
+}
 
+// write
+inline std::ostream& operator<<(std::ostream& os, const DiostRB& obj) {
+    const std::string& s = obj.str();
+    size_t size = s.size();
 
+    os.write(reinterpret_cast<const char*>(&size), sizeof(size));
+    if (!s.empty()) {
+        os.write(s.data(), size);  // пишем сырые байты
+    }
+    return os;
 }
