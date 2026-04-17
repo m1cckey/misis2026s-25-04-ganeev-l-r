@@ -48,7 +48,7 @@ inline std::istream& operator>>(std::istream& is, DiostRB& obj) {
     size_t size = 0;
     is.read(reinterpret_cast<char*>(&size), sizeof(size));
     if (is) {
-        obj.str_.resize(size);  // заранее подготавливаем строку
+        obj.str_.resize(size);
         if (size > 0) {
             is.read(const_cast<char*>(obj.str_.data()), size);
         }
@@ -63,7 +63,7 @@ inline std::ostream& operator<<(std::ostream& os, const DiostRB& obj) {
 
     os.write(reinterpret_cast<const char*>(&size), sizeof(size));
     if (!s.empty()) {
-        os.write(s.data(), size);  // пишем сырые байты
+        os.write(s.data(), size);
     }
     return os;
 }

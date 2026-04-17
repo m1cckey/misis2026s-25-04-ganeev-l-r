@@ -1,2 +1,8 @@
-add_library(labs_arrayt arrayT.cpp)
-target_include_directories(labs_arrayt PUBLIC .)
+add_library(arrayt
+    arrayt.cpp
+    arrayt.hpp
+)
+
+target_include_directories(arrayt PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
