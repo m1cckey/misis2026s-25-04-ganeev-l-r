@@ -1,6 +1,6 @@
 add_library(arrayt
-    arrayt.cpp
-    arrayt.hpp
+    arrayT.cpp
+    arrayT.hpp
 )
 
 target_include_directories(arrayt PUBLIC
