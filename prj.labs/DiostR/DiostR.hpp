@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include <vector>      // Добавлен недостающий заголовок
+#include <cstring>     // Для size_t (хотя он обычно доступен через другие заголовки)
 
 class DiostRB {
 public:
@@ -10,17 +12,17 @@ public:
 
     DiostRB() = default;
 
-  
     explicit DiostRB(const std::string& data) : str_(data) {}
 
     explicit DiostRB(const std::vector<byte_type>& data)
         : str_(reinterpret_cast<const char*>(data.data()), data.size())
     {}
 
-    DiostRB(const std::vector<char>& data)
+    explicit DiostRB(const std::vector<char>& data)  // Добавлен explicit для консистентности
         : str_(data.data(), data.size())
     {}
 
+    // Правила пяти
     DiostRB(const DiostRB& other) = default;
     DiostRB(DiostRB&& other) noexcept = default;
     DiostRB& operator=(const DiostRB& other) = default;
@@ -30,8 +32,14 @@ public:
         str_ = data;
         return *this;
     }
+
     DiostRB& operator=(const std::vector<byte_type>& data) {
         str_.assign(reinterpret_cast<const char*>(data.data()), data.size());
+        return *this;
+    }
+
+    DiostRB& operator=(const std::vector<char>& data) {  // Добавлен оператор присваивания
+        str_.assign(data.data(), data.size());
         return *this;
     }
 
@@ -41,16 +49,19 @@ private:
     std::string str_;
 };
 
-
-
 // read
 inline std::istream& operator>>(std::istream& is, DiostRB& obj) {
     size_t size = 0;
     is.read(reinterpret_cast<char*>(&size), sizeof(size));
     if (is) {
-        obj.str_.resize(size);
+        // Используем временную строку для безопасного чтения
+        std::string temp;
+        temp.resize(size);
         if (size > 0) {
-            is.read(const_cast<char*>(obj.str_.data()), size);
+            is.read(temp.data(), static_cast<std::streamsize>(size));  // Убрано const_cast
+        }
+        if (is) {
+            obj = temp;  // Присваиваем только при успешном чтении
         }
     }
     return is;
@@ -63,7 +74,7 @@ inline std::ostream& operator<<(std::ostream& os, const DiostRB& obj) {
 
     os.write(reinterpret_cast<const char*>(&size), sizeof(size));
     if (!s.empty()) {
-        os.write(s.data(), size);
+        os.write(s.data(), static_cast<std::streamsize>(size));
     }
     return os;
 }

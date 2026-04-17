@@ -4,4 +4,4 @@ project(OOP)
 set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(prj.labs/DiostR)
-add_subdirectory(prj.test/bitset_test)
+add_subdirectory(prj.test/bitsetd_test)
