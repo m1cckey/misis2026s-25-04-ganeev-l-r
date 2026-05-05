@@ -72,7 +72,7 @@ Release/doctest_bitset_m.exe
 
 0% tests passed, 7 tests failed out of 7
 
-Total Test time (real) =   0.09 sec
+Total Test time (real) =   0.06 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Not Run)
