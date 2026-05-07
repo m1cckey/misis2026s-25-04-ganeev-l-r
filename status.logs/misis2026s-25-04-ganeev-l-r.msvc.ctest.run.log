@@ -1,5 +1,5 @@
 Test project D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/build.check
-    Start 1: doctest_arrayd
+      Start  1: doctest_arrayd
 Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayd.exe
 Looked in the following places:
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayd.exe
@@ -8,8 +8,8 @@ D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctes
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_arrayd.exe.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayd.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayd.exe.exe
-1/7 Test #1: doctest_arrayd ...................***Not Run   0.00 sec
-    Start 2: doctest_arrayt
+ 1/11 Test  #1: doctest_arrayd ...................***Not Run   0.00 sec
+      Start  2: doctest_arrayt
 Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayt.exe
 Looked in the following places:
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayt.exe
@@ -18,28 +18,8 @@ D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctes
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_arrayt.exe.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayt.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_arrayt.exe.exe
-2/7 Test #2: doctest_arrayt ...................***Not Run   0.00 sec
-    Start 3: doctest_complex
-Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
-Looked in the following places:
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex.exe.exe
-Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
-Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe.exe
-3/7 Test #3: doctest_complex ..................***Not Run   0.00 sec
-    Start 4: doctest_complex_io
-Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
-Looked in the following places:
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex_io.exe
-D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex_io.exe.exe
-Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
-Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe.exe
-4/7 Test #4: doctest_complex_io ...............***Not Run   0.00 sec
-    Start 5: doctest_bitsetd
+ 2/11 Test  #2: doctest_arrayt ...................***Not Run   0.00 sec
+      Start  3: doctest_bitsetd
 Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_bitsetd.exe
 Looked in the following places:
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_bitsetd.exe
@@ -48,8 +28,8 @@ D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctes
 D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_bitsetd.exe.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_bitsetd.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_bitsetd.exe.exe
-5/7 Test #5: doctest_bitsetd ..................***Not Run   0.00 sec
-    Start 6: doctest_bitsetd_io
+ 3/11 Test  #3: doctest_bitsetd ..................***Not Run   0.00 sec
+      Start  4: doctest_bitsetd_io
 Could not find executable doctest_bitset_io
 Looked in the following places:
 doctest_bitset_io
@@ -58,8 +38,8 @@ Release/doctest_bitset_io
 Release/doctest_bitset_io.exe
 Release/doctest_bitset_io
 Release/doctest_bitset_io.exe
-6/7 Test #6: doctest_bitsetd_io ...............***Not Run   0.00 sec
-    Start 7: doctest_bitsetd_m
+ 4/11 Test  #4: doctest_bitsetd_io ...............***Not Run   0.00 sec
+      Start  5: doctest_bitsetd_m
 Could not find executable doctest_bitset_m
 Looked in the following places:
 doctest_bitset_m
@@ -68,17 +48,81 @@ Release/doctest_bitset_m
 Release/doctest_bitset_m.exe
 Release/doctest_bitset_m
 Release/doctest_bitset_m.exe
-7/7 Test #7: doctest_bitsetd_m ................***Not Run   0.00 sec
+ 5/11 Test  #5: doctest_bitsetd_m ................***Not Run   0.00 sec
+      Start  6: doctest_complex
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex.exe.exe
+ 6/11 Test  #6: doctest_complex ..................***Not Run   0.00 sec
+      Start  7: doctest_complex_io
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex_io.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_complex_io.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_complex_io.exe.exe
+ 7/11 Test  #7: doctest_complex_io ...............***Not Run   0.00 sec
+      Start  8: doctest_queuea
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuea.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuea.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuea.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_queuea.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_queuea.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuea.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuea.exe.exe
+ 8/11 Test  #8: doctest_queuea ...................***Not Run   0.00 sec
+      Start  9: doctest_queuel
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuel.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuel.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuel.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_queuel.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_queuel.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuel.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_queuel.exe.exe
+ 9/11 Test  #9: doctest_queuel ...................***Not Run   0.00 sec
+      Start 10: doctest_rational
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_rational.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_rational.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational.exe.exe
+10/11 Test #10: doctest_rational .................***Not Run   0.00 sec
+      Start 11: doctest_rational_io
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational_io.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational_io.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational_io.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_rational_io.exe
+D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/Release/doctest_rational_io.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational_io.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctest_rational_io.exe.exe
+11/11 Test #11: doctest_rational_io ..............***Not Run   0.00 sec
 
-0% tests passed, 7 tests failed out of 7
+0% tests passed, 11 tests failed out of 11
 
-Total Test time (real) =   0.06 sec
+Total Test time (real) =   0.13 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Not Run)
 	  2 - doctest_arrayt (Not Run)
-	  3 - doctest_complex (Not Run)
-	  4 - doctest_complex_io (Not Run)
-	  5 - doctest_bitsetd (Not Run)
-	  6 - doctest_bitsetd_io (Not Run)
-	  7 - doctest_bitsetd_m (Not Run)
+	  3 - doctest_bitsetd (Not Run)
+	  4 - doctest_bitsetd_io (Not Run)
+	  5 - doctest_bitsetd_m (Not Run)
+	  6 - doctest_complex (Not Run)
+	  7 - doctest_complex_io (Not Run)
+	  8 - doctest_queuea (Not Run)
+	  9 - doctest_queuel (Not Run)
+	 10 - doctest_rational (Not Run)
+	 11 - doctest_rational_io (Not Run)
