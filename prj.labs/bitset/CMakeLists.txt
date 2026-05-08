@@ -1,10 +1,2 @@
-add_library(bitset
-    BitsetD.cpp
-    BitsetD.hpp
-)
-
-target_include_directories(bitset PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
-target_link_libraries(bitset PUBLIC DiostR)
+set(CMAKE_CXX_STANDARD 20)
+add_library(bitsetd  bitsetd.hpp bitsetd.cpp)
