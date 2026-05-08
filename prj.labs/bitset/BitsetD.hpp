@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <string>
 #include <vector>
+#include <istream>
+#include <ostream>
 
 class BitsetD {
 public:
@@ -104,6 +106,8 @@ public:
 
     
     std::string to_string(const StrFormat fmt = StrFormat::Def, const int32_t len = 0) const;
+    void write_to(std::ostream& out) const;
+    void read_from(std::istream& in);
 
 private:
     std::int32_t                size_ = 0;

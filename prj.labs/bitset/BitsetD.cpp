@@ -112,3 +112,23 @@ BitsetD& BitsetD::operator^=(const BitsetD& rhs) {
 std::string BitsetD::to_string(const StrFormat fmt, const int32_t len) const {
     return "";
 }
+
+void BitsetD::write_to(std::ostream& out) const {
+    out.put('b');
+    
+    out.put(static_cast<char>(size_));
+
+    std::uint8_t current_byte = 0;
+    int bit_count = 0;
+    std::uint8_t hash = 0;
+    
+    for (int32_t i = 0; i < size_; ++i) {
+        if (get(i)) {
+            current_byte |= (1 << bit_count);
+        }
+        bit_count++;
+        
+        if (bit_count == 8 || i == size_ - 1) {
+            out.put(static_cast<char>(current_byte));
+        }
+      }
