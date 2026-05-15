@@ -118,17 +118,36 @@ void BitsetD::write_to(std::ostream& out) const {
     
     out.put(static_cast<char>(size_));
 
-    std::uint8_t current_byte = 0;
-    int bit_count = 0;
+    int32_t total_bytes = (size_ + 7)/8;
+    int32_t byte_pos = 0;
     std::uint8_t hash = 0;
     
-    for (int32_t i = 0; i < size_; ++i) {
-        if (get(i)) {
-            current_byte |= (1 << bit_count);
+    for (int32_t i = 0; i < total_bytes; ++i) {
+        int32_t chunk_idx = byte_pos / 4;
+        int32_t byte_in_chunk = byte_in_chunk % 4;
+        std::uint8_t byte = (chunks_[chunk_idx] >> (byte_in_chunk*8)) & 0xFF;
+        if (i == total_bytes - 1 && size_ % 8 != 0) {
+            byte &= (1 << (size_ % 8)) - 1;
         }
-        bit_count++;
         
-        if (bit_count == 8 || i == size_ - 1) {
-            out.put(static_cast<char>(current_byte));
+        out.put(static_cast<char>(byte));
+        hash ^= byte;
+        byte_pos++;
+        } 
+      out.put(static_cast<char>(hash));
+    }
+void BitsetD::read_from(std::istream& in){
+    char marker;
+    if(in.get(marker)){
+        if(marker != 'b'){
+            throw std::runtime_error("wrong marker");
         }
-      }
+    }else{
+        throw std::runtime_error("wrong marker");
+    }
+
+    char size_byte;
+    if()
+
+
+}

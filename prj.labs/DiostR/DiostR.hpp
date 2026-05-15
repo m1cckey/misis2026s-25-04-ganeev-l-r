@@ -3,8 +3,8 @@
 
 #include <string>
 #include <iostream>
-#include <vector>      // Добавлен недостающий заголовок
-#include <cstring>     // Для size_t (хотя он обычно доступен через другие заголовки)
+#include <vector>      
+#include <cstring>     
 
 class DiostRB {
 public:
@@ -18,11 +18,11 @@ public:
         : str_(reinterpret_cast<const char*>(data.data()), data.size())
     {}
 
-    explicit DiostRB(const std::vector<char>& data)  // Добавлен explicit для консистентности
+    explicit DiostRB(const std::vector<char>& data)  
         : str_(data.data(), data.size())
     {}
 
-    // Правила пяти
+
     DiostRB(const DiostRB& other) = default;
     DiostRB(DiostRB&& other) noexcept = default;
     DiostRB& operator=(const DiostRB& other) = default;
@@ -38,7 +38,7 @@ public:
         return *this;
     }
 
-    DiostRB& operator=(const std::vector<char>& data) {  // Добавлен оператор присваивания
+    DiostRB& operator=(const std::vector<char>& data) {  
         str_.assign(data.data(), data.size());
         return *this;
     }
@@ -54,14 +54,13 @@ inline std::istream& operator>>(std::istream& is, DiostRB& obj) {
     size_t size = 0;
     is.read(reinterpret_cast<char*>(&size), sizeof(size));
     if (is) {
-        // Используем временную строку для безопасного чтения
         std::string temp;
         temp.resize(size);
         if (size > 0) {
-            is.read(temp.data(), static_cast<std::streamsize>(size));  // Убрано const_cast
+            is.read(temp.data(), static_cast<std::streamsize>(size));  
         }
         if (is) {
-            obj = temp;  // Присваиваем только при успешном чтении
+            obj = temp;  
         }
     }
     return is;
