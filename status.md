@@ -1,12 +1,10 @@
-STAMP: 20260515-103542
+STAMP: 20260521-132155
 ERROR: file prj.thirdparty/doctest/doctest.h is absent
 ERROR: file prj.labs/arrayd/CMakeLists.txt is absent
 ERROR: file prj.labs/arrayd/arrayd.hpp is absent
 ERROR: file prj.labs/bitsetd/CMakeLists.txt is absent
 ERROR: file prj.labs/bitsetd/bitsetd.hpp is absent
 ERROR: file prj.labs/bitsetd/bitsetd.cpp is absent
-ERROR: file prj.labs/dio/CMakeLists.txt is absent
-ERROR: file prj.labs/dio/dio.hpp is absent
 ERROR: file prj.labs/queuea/queuea.hpp is absent
 ERROR: file prj.labs/queuel/queuel.hpp is absent
 ERROR: file prj.test/arrayd_test.cpp is absent
