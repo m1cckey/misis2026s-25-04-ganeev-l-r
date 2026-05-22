@@ -1,10 +1,11 @@
-STAMP: 20260521-132155
+STAMP: 20260522-114908
 ERROR: file prj.thirdparty/doctest/doctest.h is absent
 ERROR: file prj.labs/arrayd/CMakeLists.txt is absent
 ERROR: file prj.labs/arrayd/arrayd.hpp is absent
 ERROR: file prj.labs/bitsetd/CMakeLists.txt is absent
 ERROR: file prj.labs/bitsetd/bitsetd.hpp is absent
 ERROR: file prj.labs/bitsetd/bitsetd.cpp is absent
+ERROR: file prj.labs/jaggeda/jaggeda.hpp is absent
 ERROR: file prj.labs/queuea/queuea.hpp is absent
 ERROR: file prj.labs/queuel/queuel.hpp is absent
 ERROR: file prj.test/arrayd_test.cpp is absent
@@ -15,6 +16,7 @@ ERROR: file prj.test/arrayt_test.cpp is absent
 ERROR: file prj.test/bitsetd_profiler.cpp is absent
 ERROR: file prj.test/bitsetd_test.cpp is absent
 ERROR: file prj.test/dio_test.cpp is absent
+ERROR: file prj.test/jaggeda_test.cpp is absent
 ERROR: file prj.test/rational_test.cpp is absent
 OK: CMake generator successed
 ERROR: lab bitsetd - test build failed
@@ -26,4 +28,5 @@ ERROR: lab queuea - test build failed
 ERROR: lab queuea_m - test build failed
 ERROR: lab queuel - test build failed
 ERROR: lab queuel_m - test build failed
+ERROR: lab jaggeda - test build failed
 ERROR: lab rational - test build failed
