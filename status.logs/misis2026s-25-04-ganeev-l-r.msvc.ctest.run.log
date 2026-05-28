@@ -142,7 +142,7 @@ Release/D:/projects/misis2026-check/misis2026s-25-04-ganeev-l-r/bin.check/doctes
 
 0% tests passed, 14 tests failed out of 14
 
-Total Test time (real) =   0.11 sec
+Total Test time (real) =   0.10 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Not Run)
